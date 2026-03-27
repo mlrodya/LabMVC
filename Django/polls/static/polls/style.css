@@ -1,0 +1,18 @@
+li a {
+    color: #2e8b57;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+li a:hover {
+    color: #006400;
+    text-decoration: underline;
+}
+
+body {
+    background-color: #f4f4f9;
+    background-image: url("images/background.jpg");
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
