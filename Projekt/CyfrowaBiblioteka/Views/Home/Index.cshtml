@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Strona Główna";
+}
+
+<div class="text-center mt-5">
+    <h1 class="display-4">Witamy w Cyfrowej Bibliotece!</h1>
+    <p class="lead mt-3">Twój system do zarządzania zbiorami, autorami i wypożyczeniami.</p>
+    
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Zarządzaj Autorami</h5>
+                    <p class="card-text">Dodawaj nowych autorów do systemu.</p>
+                    <a asp-controller="Autorzy" asp-action="Index" class="btn btn-primary">Przejdź</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Katalog Książek</h5>
+                    <p class="card-text">Przeglądaj i dodawaj nowe książki do zbiorów.</p>
+                    <a asp-controller="Ksiazki" asp-action="Index" class="btn btn-success">Przejdź</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Wypożyczenia</h5>
+                    <p class="card-text">Śledź, kto i kiedy wypożyczył książki.</p>
+                    <a asp-controller="Wypozyczenia" asp-action="Index" class="btn btn-warning">Przejdź</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
