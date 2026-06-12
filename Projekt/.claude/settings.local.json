@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Remove-Item *)",
+      "PowerShell($env:PATH += \";C:\\\\Program Files\\\\Git\\\\cmd\"; cd \"D:\\\\Study\\\\LAB\\\\Projekt\"; git status)",
+      "PowerShell(Get-Command *)",
+      "PowerShell($git = \"C:\\\\Users\\\\mlrod\\\\Downloads\\\\PortableGit\\\\cmd\\\\git.exe\"; cd \"D:\\\\Study\\\\LAB\\\\Projekt\"; & $git status)",
+      "PowerShell($git = \"C:\\\\Users\\\\mlrod\\\\Downloads\\\\PortableGit\\\\cmd\\\\git.exe\"; cd \"D:\\\\Study\\\\LAB\\\\Projekt\"; & $git remote -v)",
+      "Skill(run)",
+      "PowerShell(Start-Sleep -Seconds 5; Invoke-WebRequest -Uri \"http://localhost:5000\" -UseBasicParsing -TimeoutSec 5 -ErrorAction SilentlyContinue | Select-Object StatusCode)",
+      "PowerShell(Start-Sleep -Seconds 5; $ports = @\\(5000, 5001, 7000, 7001, 8080\\); foreach \\($p in $ports\\) { $result = Invoke-WebRequest -Uri \"http://localhost:$p\" -UseBasicParsing -TimeoutSec 2 -ErrorAction SilentlyContinue; if \\($result\\) { Write-Output \"Працює на порту: $p\"; break } })",
+      "PowerShell(Get-Process *)",
+      "PowerShell(Stop-Process *)",
+      "PowerShell(Start-Process \"http://localhost:5157\")",
+      "PowerShell(Get-ChildItem -Path \"D:\\\\Study\\\\LAB\\\\Projekt\" -Recurse -Depth 3 -Exclude \"bin\",\"obj\",\"node_modules\",\".git\" | Where-Object { -not $_.FullName.Contains\\('\\\\bin\\\\'\\) -and -not $_.FullName.Contains\\('\\\\obj\\\\'\\) } | Select-Object @{Name=\"Path\";Expression={$_.FullName.Replace\\(\"D:\\\\Study\\\\LAB\\\\Projekt\\\\\", \"\"\\).Replace\\(\"\\\\\", \"/\"\\)}}, @{Name=\"Type\";Expression={if\\($_.PSIsContainer\\){\"DIR\"}else{\"FILE\"}}} | Sort-Object Path | Format-Table -AutoSize)",
+      "PowerShell($env:PATH += \";C:\\\\Program Files\\\\Git\\\\bin\"; cd D:\\\\Study\\\\LAB\\\\Projekt; git remote -v; git log --oneline -5)"
+    ]
+  }
+}

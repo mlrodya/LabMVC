@@ -3,13 +3,18 @@ using CyfrowaBiblioteka.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add DbContext with SQLite
 builder.Services.AddDbContext<BibliotekaContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("BibliotekaConnection")));
 
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<BibliotekaContext>();
+    db.Database.Migrate();
+}
 
 if (!app.Environment.IsDevelopment())
 {
