@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CyfrowaBiblioteka.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60e266afd3aa62b801c62e519ff6f7560f219deb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad7623622adf5195ee41a48210aa7d1589a52e34")]
 [assembly: System.Reflection.AssemblyProductAttribute("CyfrowaBiblioteka.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CyfrowaBiblioteka.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
